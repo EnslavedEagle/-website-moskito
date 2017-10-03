@@ -1,20 +1,28 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const rename = require('gulp-rename');
 const pug = require('gulp-pug');
 
 gulp.task('pug', () => {
-  gulp.src('src/views')
-    .pipe(pug())
-    .dist('dist');
+  gulp.src('src/views/index.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('sass', () => {
-  gulp.src('src/scss')
-    .pipe(sass())
-    .dist('dist/css');
+  gulp.src('src/sass/index.scss')
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('default', () => {
-  gulp.watch(['src/scss/**/*.scss'], ['sass']);
-  gulp.watch(['src/views/index.pug'], ['pug']);
+  gulp.run('pug');
+  gulp.run('sass');
+  gulp.watch(['./src/scss/index.scss'], ['sass']);
+  gulp.watch(['./src/views/index.pug'], ['pug']);
 });
