@@ -8,8 +8,6 @@ html(lang="pl")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="style.css")
   body
-    div.navbar
-      .navbar__inner
-        .navbar__logo
-          h1.navbar__logo__brand
-            img.navbar__logo__image(alt=title)
+    include partials/_navigation
+
+    script(src="index.js")

@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar__inner">
-        <div class="navbar__logo">
-          <h1 class="navbar__logo__brand"><img class="navbar__logo__image" alt="Moskito"></h1>
-        </div>
+    <div class="nav" id="nav">
+      <div class="nav__inner">
+        <h1 class="nav__logo"><a title="Moskito" href="#index"><img class="nav__logo__img" alt="Moskito" src="./assets/img/moskito-logo.png"></a></h1>
+        <ul class="nav__links">
+          <li class="nav__links__item"><a title="O nas" href="#o_nas">O nas</a></li>
+          <li class="nav__links__item"><a title="Montaż/serwis" href="#montaz_serwis">Montaż/serwis</a></li>
+          <li class="nav__links__item"><a title="Oferta" href="#oferta">Oferta</a></li>
+          <li class="nav__links__item"><a title="Galeria" href="#galeria">Galeria</a></li>
+          <li class="nav__links__item"><a title="Kontakt" href="#kontakt">Kontakt</a></li>
+        </ul>
+        <ul class="nav__contact">
+          <li class="nav__contact__item nav__contact__item--phone"><a href="tel:123456789"><span class="fa fa-phone"></span>123 456 789</a></li>
+          <li class="nav__contact__item nav__contact__item--email"><a href="mailto:mailfirmy@moskito.pl"><span class="fa fa-envelope"></span>mailfirmy@moskito.pl</a></li>
+        </ul>
+        <button class="nav__hamburger" id="nav__hamburger"><span class="fa fa-bars"></span></button>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

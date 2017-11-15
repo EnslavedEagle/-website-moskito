@@ -1,0 +1,27 @@
+.nav#nav
+  .nav__inner
+    h1.nav__logo
+      a(title="Moskito", href="#index")
+        img.nav__logo__img(alt="Moskito", src="./assets/img/moskito-logo.png")
+    ul.nav__links
+      li.nav__links__item
+        a(title="O nas", href="#o_nas")="O nas"
+      li.nav__links__item
+        a(title="Montaż/serwis", href="#montaz_serwis")="Montaż/serwis"
+      li.nav__links__item
+        a(title="Oferta", href="#oferta")="Oferta"
+      li.nav__links__item
+        a(title="Galeria", href="#galeria")="Galeria"
+      li.nav__links__item
+        a(title="Kontakt", href="#kontakt")="Kontakt"
+    ul.nav__contact
+      li.nav__contact__item.nav__contact__item--phone
+        a(href="tel:123456789")
+          span.fa.fa-phone
+          | 123 456 789
+      li.nav__contact__item.nav__contact__item--email
+        a(href="mailto:mailfirmy@moskito.pl")
+          span.fa.fa-envelope
+          | mailfirmy@moskito.pl
+    button.nav__hamburger#nav__hamburger
+      span.fa.fa-bars

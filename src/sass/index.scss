@@ -1,3 +1,39 @@
+// Normalize
+@import 'node_modules/normalize-scss/sass/normalize';
+@include normalize();
+
+$fa-font-path: './assets/fonts';
+@import 'third-party/font-awesome/font-awesome';
+
+@import 'config/colors';
+@import 'config/fonts';
+
 body {
-  background: red;
+  min-height: 500vh;
+  font-size: 18px;
+
+  // Gradient background adjusting to screen's width
+  &::before {
+    content: '';
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #ffffff 0%, #cccccc 50%, #ffffff 100%);
+  }
 }
+
+a {
+  color: $color-primary;
+  font-family: 'Aleo', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover, &:active {
+    color: $color-secondary;
+  }
+}
+
+@import 'partials/navigation';
