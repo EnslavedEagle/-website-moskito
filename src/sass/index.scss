@@ -8,8 +8,16 @@ $fa-font-path: './assets/fonts';
 @import 'config/colors';
 @import 'config/fonts';
 
+html, body {
+  box-sizing: border-box;
+}
+body * {
+  box-sizing: inherit;
+}
+
 body {
   min-height: 500vh;
+  font-family: 'Sen', Tahoma, sans-serif;
   font-size: 18px;
 
   // Gradient background adjusting to screen's width
@@ -25,10 +33,13 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Aleo', sans-serif;
+  font-weight: 900;
+}
+
 a {
   color: $color-primary;
-  font-family: 'Aleo', sans-serif;
-  font-weight: bold;
   text-decoration: none;
 
   &:hover, &:active {
@@ -36,4 +47,11 @@ a {
   }
 }
 
-@import 'partials/navigation';
+body > section {
+  min-height: 100vh;
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@import 'partials/all';

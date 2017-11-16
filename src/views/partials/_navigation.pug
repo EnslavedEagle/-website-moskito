@@ -1,4 +1,4 @@
-.nav#nav
+nav.nav.nav--sticky#main-navigation
   .nav__inner
     h1.nav__logo
       a(title="Moskito", href="#index")
@@ -16,12 +16,12 @@
         a(title="Kontakt", href="#kontakt")="Kontakt"
     ul.nav__contact
       li.nav__contact__item.nav__contact__item--phone
-        a(href="tel:123456789")
+        a(href="tel:" + phone)
           span.fa.fa-phone
-          | 123 456 789
+          = phone
       li.nav__contact__item.nav__contact__item--email
-        a(href="mailto:mailfirmy@moskito.pl")
+        a(href="mailto:" + email)
           span.fa.fa-envelope
-          | mailfirmy@moskito.pl
+          = email
     button.nav__hamburger#nav__hamburger
       span.fa.fa-bars
