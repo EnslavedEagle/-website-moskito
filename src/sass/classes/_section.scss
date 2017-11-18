@@ -1,0 +1,25 @@
+.section {
+  background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
+  padding: 1.2em;
+  position: relative;
+}
+
+.section--shadow {
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: $reflected-gradient;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &::before {
+    top: -1px;
+  }
+
+  &::after {
+    bottom: -1px;
+  }
+}

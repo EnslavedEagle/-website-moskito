@@ -2769,8 +2769,7 @@ body * {
   box-sizing: inherit; }
 
 body {
-  min-height: 500vh;
-  font-family: 'Sen', Tahoma, sans-serif;
+  font-family: "Sen", sans-serif;
   font-size: 18px; }
   body::before {
     content: '';
@@ -2783,8 +2782,9 @@ body {
     background-image: linear-gradient(to top, #ffffff 0%, #cccccc 50%, #ffffff 100%); }
 
 h1, h2, h3, h4, h5, h6, a {
-  font-family: 'Aleo', sans-serif;
-  font-weight: 900; }
+  font-family: "Aleo", sans-serif;
+  font-weight: 900;
+  margin: 0; }
 
 a {
   color: #003c85;
@@ -2792,11 +2792,23 @@ a {
   a:hover, a:active {
     color: #ed9d29; }
 
+a.anchor {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  position: relative;
+  top: -110px; }
+
+p {
+  line-height: 1.2em; }
+
+img {
+  max-width: 100%; }
+
 body > section {
-  min-height: 100vh;
   width: 95%;
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 1em auto; }
 
 .nav {
   background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
@@ -2804,7 +2816,8 @@ body > section {
   top: 0;
   left: 0;
   right: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
   .nav__inner {
     width: 100%;
     max-width: 1024px;
@@ -2926,7 +2939,7 @@ body > section {
       width: 80%;
       max-width: 900px;
       height: 2px;
-      background-image: linear-gradient(to left, transparent 0%, #003c85 50%, transparent 100%);
+      background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
       position: absolute;
       bottom: 0;
       right: 5%; }
@@ -2946,6 +2959,8 @@ body > section {
     align-items: center; } }
 
 @media (min-width: 55rem) {
+  body {
+    padding-top: 100px; }
   .nav__inner {
     justify-content: space-between; }
     .nav__inner::after {
@@ -2962,15 +2977,52 @@ body > section {
   .nav__contact__item {
     line-height: 2.3em; } }
 
-#o_nas .jumbotron {
+.section, #o_nas_section, #montaz_serwis_section {
+  background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
+  padding: 1.2em;
+  position: relative; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before {
+  top: -1px; }
+
+.section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  bottom: -1px; }
+
+.heading, #o_nas_section .jumbotron__heading, #montaz_serwis_section .services__heading {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin: 0 0 20px;
+  line-height: 1.2em;
+  padding: 0;
+  position: relative; }
+  .heading::after, #o_nas_section .jumbotron__heading::after, #montaz_serwis_section .services__heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+    position: absolute;
+    bottom: -10px; }
+
+#o_nas_section .jumbotron {
   background: url("assets/img/o_nas-background.jpg") top left no-repeat;
   background-size: cover;
-  border: 1.75rem solid #fff;
-  min-height: 75vh;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end; }
-  #o_nas .jumbotron__content {
+  align-items: flex-end;
+  width: 100%;
+  min-height: 60vh; }
+  #o_nas_section .jumbotron__content {
     background: rgba(255, 255, 255, 0.9);
     width: 80%;
     max-width: 500px;
@@ -2978,28 +3030,198 @@ body > section {
     padding: .75em;
     border-radius: 1rem;
     box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2); }
-  #o_nas .jumbotron__heading {
-    font-size: 2.5em;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 .75rem; }
-    #o_nas .jumbotron__heading::after {
-      content: '';
-      display: block;
-      width: 80%;
-      max-width: 300px;
-      height: 2px;
-      background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
-      margin: .15em 0; }
-  #o_nas .jumbotron__text {
+  #o_nas_section .jumbotron__text {
     font-size: .8em;
     padding: 0 .75rem;
     line-height: 1.25em; }
 
 @media (max-width: 44.9999rem) {
   #o_nas .jumbotron {
-    border-width: 1.25rem; }
-  #o_nas .jumbotron__heading::after {
-    width: 80%; }
-  #o_nas .jumbotron__heading, #o_nas .jumbotron__text {
-    padding: 0; } }
+    border-width: 1.25rem; } }
+
+@media (min-width: 45rem) {
+  #o_nas .jumbotron {
+    min-height: 80vh; } }
+
+.heading, #o_nas_section .jumbotron__heading, #montaz_serwis_section .services__heading {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin: 0 0 20px;
+  line-height: 1.2em;
+  padding: 0;
+  position: relative; }
+  .heading::after, #o_nas_section .jumbotron__heading::after, #montaz_serwis_section .services__heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+    position: absolute;
+    bottom: -10px; }
+
+.section, #o_nas_section, #montaz_serwis_section {
+  background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
+  padding: 1.2em;
+  position: relative; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before {
+  top: -1px; }
+
+.section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  bottom: -1px; }
+
+#montaz_serwis_section {
+  display: flex;
+  flex-direction: column; }
+  #montaz_serwis_section .services__image {
+    align-self: center;
+    order: 2; }
+  #montaz_serwis_section .services__text {
+    font-size: .8rem; }
+    #montaz_serwis_section .services__text p {
+      line-height: 1.5em; }
+  #montaz_serwis_section .services__list {
+    background: #ffffff;
+    border-radius: .5em;
+    padding: .85em;
+    margin: 1em 0; }
+    #montaz_serwis_section .services__list__key, #montaz_serwis_section .services__list__value {
+      line-height: 1.2em;
+      vertical-align: top; }
+    #montaz_serwis_section .services__list__key {
+      min-width: 120px; }
+    #montaz_serwis_section .services__list__key > span {
+      display: table;
+      position: relative; }
+    @media (min-width: 45rem) {
+      #montaz_serwis_section .services__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 3em 0 0; }
+        #montaz_serwis_section .services__list__key {
+          width: 130px;
+          position: relative; }
+          #montaz_serwis_section .services__list__key::before {
+            content: '';
+            display: block;
+            top: .7em;
+            transform: translateY(-50%);
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #dbdbdb;
+            position: absolute;
+            z-index: 0; }
+          #montaz_serwis_section .services__list__key span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: table;
+            background: #ffffff;
+            padding: 0 .5em 0 0; }
+        #montaz_serwis_section .services__list__value {
+          width: calc(100% - 130px); }
+        #montaz_serwis_section .services__list__key, #montaz_serwis_section .services__list__value {
+          margin: 0 0 .75em;
+          padding: 0 .5em;
+          line-height: 1.4em; }
+          #montaz_serwis_section .services__list__key span, #montaz_serwis_section .services__list__key p, #montaz_serwis_section .services__list__value span, #montaz_serwis_section .services__list__value p {
+            margin: 0; } }
+
+@media (min-width: 55rem) {
+  #montaz_serwis_section {
+    flex-direction: row;
+    align-items: center; }
+    #montaz_serwis_section .services__image {
+      order: 0; }
+    #montaz_serwis_section .services__text {
+      padding-left: 1.2em; }
+    #montaz_serwis_section .services__text {
+      max-width: 600px;
+      margin: 0 auto; } }
+
+.section, #o_nas_section, #montaz_serwis_section {
+  background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
+  padding: 1.2em;
+  position: relative; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before {
+  top: -1px; }
+
+.section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  bottom: -1px; }
+
+#montaz_serwis_types .types__list {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 2em 0; }
+
+#montaz_serwis_types .types__item {
+  display: block;
+  background: #eeeeee;
+  font-family: "Aleo", sans-serif;
+  padding: 1.2em;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box; }
+
+#montaz_serwis_types .types__image {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto .5em; }
+
+#montaz_serwis_types .types__name::before {
+  content: '';
+  display: block;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+  width: 100%;
+  height: 2px;
+  margin: 1em 0 .5em; }
+
+@media (max-width: 44.9999rem) {
+  .types__list {
+    justify-content: center; }
+  .types__item {
+    width: 100%;
+    margin: 1em 0;
+    font-size: 1.2rem; } }
+
+@media (min-width: 45rem) {
+  .types__item {
+    width: 45%;
+    margin: 1em 2.5%;
+    font-size: .85rem; } }
+
+@media (min-width: 55rem) {
+  .types__item {
+    width: 31.3333333%;
+    margin: 1em 1%;
+    font-size: .95rem; } }
+
+@media (min-width: 65rem) {
+  .types__item {
+    font-size: 1.2rem; } }

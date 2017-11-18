@@ -1,0 +1,20 @@
+// Colors
+
+$color-white: #ffffff;
+$color-light-grey: #eeeeee;
+$color-black: #000000;
+
+$color-primary: #003c85;
+$color-secondary: #ed9d29;
+
+
+// Gradients
+
+$reflected-gradient: linear-gradient(
+  to right,
+  transparent 0%,
+  rgba(0, 0, 0, .1) 25%,
+  rgba(0, 0, 0, .2) 50%,
+  rgba(0, 0, 0, .1) 75%,
+  transparent 100%
+);

@@ -1,0 +1,64 @@
+@import '../mixins/sizes';
+
+@mixin keyValueList {
+  &__key, &__value {
+    line-height: 1.2em;
+    vertical-align: top;
+  }
+
+  &__key {
+    min-width: 120px;
+  }
+
+  &__key > span {
+    display: table;
+    position: relative;
+  }
+
+  @include sm {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 0 0;
+
+    &__key {
+      width: 130px;
+      position: relative;
+      
+      &::before {
+        content: '';
+        display: block;
+        top: .7em;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #dbdbdb;
+        position: absolute;
+        z-index: 0;
+      }
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: table;
+        background: #ffffff;
+        padding: 0 .5em 0 0;
+      }
+    }
+
+    &__value {
+      width: calc(100% - 130px);
+    }
+
+    &__key, &__value {
+      margin: 0 0 .75em;
+      padding: 0 .5em;
+      line-height: 1.4em;
+
+      span, p {
+        margin: 0;
+      }
+    }
+  }
+}

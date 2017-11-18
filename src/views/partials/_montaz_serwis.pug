@@ -1,0 +1,31 @@
+- var services_names = ['Bramy garażowe', 'Drzwi stalowe zewnętrzne', 'Drzwi wewnętrzne', 'Systemy przeciwsłoneczne', 'Moskitiery']
+- var services_images = ['services-bramy_garazowe.jpg', 'services-drzwi_stalowe.jpg', 'services-drzwi_wewnetrzne.jpg', 'services-systemy_przeciwsloneczne.jpg', 'services-moskitiery.jpg']
+
+- var list_names = ['Drzwi', 'Bramy garażowe', 'Rolety i żaluzje', 'Markizy']
+- var list_descs = ['Montaż nowych drzwi, wymiana klamek, wkładek, zawiasów, uszczelek. Regulacja i podcinanie', 'Montaż nowych bram, montaż bram przemysłowych, montaż automatyki, regulacje, przeglądy, programowanie automatyki', 'Kompleksowe naprawy rolet materiałowych i zewnętrznych oraz żaluzji', 'Naprawy markiz, wymiana płócien']
+
+a.anchor#montaz_serwis(href="javascript:void(0)")
+section.services#montaz_serwis_section
+  img.services__image(alt="Montaż i serwis", src="assets/img/montaz_serwis-image.jpg")
+  .services__text
+    h2.services__heading
+      | Montaż i serwis
+    p.services__lead Poniżej przedstawiamy typowe usługi jakie świadczymy. Zakres naszych usług jest bardzo szeroki, dlatego jeśli chcieliby Państwo zapytać o&nbsp;niewymienioną w&nbsp;tabeli usługę, zapraszamy do&nbsp;działu 
+      a(href="#kontakt")="KONTAKT"
+      |  w&nbsp;celu wypełnienia formularza kontaktowego. 
+      br
+    p.services__lead Możecie również Państwo zapytać telefonicznie: 
+      a(href="tel: " + phone)=phone
+      | .
+    dl.services__list
+      - for (var i = 0, len = list_names.length; i < len; i++)
+        dt.services__list__key
+          span=list_names[i]
+        dd.services__list__value
+          p=list_descs[i]
+section#montaz_serwis_types
+  ul.types__list
+    - for (var i = 0, len = services_names.length; i < len; i++)
+      li.types__item
+        img.types__image(src='assets/img/'+services_images[i], alt='')
+        span.types__name=services_names[i]

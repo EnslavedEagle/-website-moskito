@@ -1,19 +1,15 @@
+- var link_hrefs = ['#index', '#o_nas', '#montaz_serwis', '#oferta', '#galeria', '#kontakt']
+- var link_names = ['Moskito', 'O nas', 'Montaż/serwis', 'Oferta', 'Galeria', 'Kontakt']
+
 nav.nav.nav--sticky#main-navigation
   .nav__inner
     h1.nav__logo
-      a(title="Moskito", href="#index")
-        img.nav__logo__img(alt="Moskito", src="./assets/img/moskito-logo.png")
+      a(title=link_names[0], href=link_hrefs[0])
+        img.nav__logo__img(alt=link_names[0], src="./assets/img/moskito-logo.png")
     ul.nav__links
-      li.nav__links__item
-        a(title="O nas", href="#o_nas")="O nas"
-      li.nav__links__item
-        a(title="Montaż/serwis", href="#montaz_serwis")="Montaż/serwis"
-      li.nav__links__item
-        a(title="Oferta", href="#oferta")="Oferta"
-      li.nav__links__item
-        a(title="Galeria", href="#galeria")="Galeria"
-      li.nav__links__item
-        a(title="Kontakt", href="#kontakt")="Kontakt"
+      - for (var i = 1, len = link_names.length; i < len; i++)
+        li.nav__links__item
+          a(title=link_names[i], href=link_hrefs[i])=link_names[i]
     ul.nav__contact
       li.nav__contact__item.nav__contact__item--phone
         a(href="tel:" + phone)

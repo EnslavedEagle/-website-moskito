@@ -1,4 +1,4 @@
-@import '../config/sizes';
+@import '../mixins/sizes';
 
 $transition: all .25s ease-out;
 
@@ -9,6 +9,7 @@ $transition: all .25s ease-out;
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 999;
 
   &__inner {
     width: 100%;
@@ -193,12 +194,7 @@ $transition: all .25s ease-out;
       width: 80%;
       max-width: 900px;
       height: 2px;
-      background-image: linear-gradient(
-        to left,
-        transparent 0%,
-        $color-primary 50%,
-        transparent 100%
-      );
+      background-image: $reflected-gradient;
       position: absolute;
       bottom: 0;
       right: 5%;
@@ -230,6 +226,10 @@ $transition: all .25s ease-out;
 }
 
 @include md {
+  body {
+    padding-top: 100px;
+  }
+
   .nav__inner {
     justify-content: space-between;
 
