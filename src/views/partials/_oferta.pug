@@ -60,16 +60,16 @@ section#oferta_section
         p="Choć czasem nie zdajesz sobie z tego sprawy, niemal każdego dnia drzwi otwierane i zamykane są dziesiątki razy. Dlatego też, dla ich prawidłowego i komfortowego użytkowania będzie miał wpływ fachowy dobry montaż."
         p="Nasze produkty wykonane są z wysokiej jakości materiałów, dzięki czemu zyskujesz gwarancję długotrwałego, bezproblemowego użytkowania i komfortu, nawet jeśli drzwi są mocno eksploatowane!"
     .slide.systemy-przeciwsloneczne
-      img.slide__image(src="assets/oferta-systemy_przeciwsloneczne.jpg", alt="")
+      img.slide__image(src="assets/img/oferta-systemy_przeciwsloneczne.jpg", alt="")
       .slide__content
         h3.slide__heading="Systemy przeciwsłoneczne i moskitiery"
-        p="Naszą specjalizacja są wszelaki systemy przeciwsłoneczne. Oferujemy szeroką gamę produktów, dopasowana do potrzeb najbardziej wymagających Klientów."
+        p="Naszą specjalizacją są wszelakie systemy przeciwsłoneczne. Oferujemy szeroką gamę produktów, dopasowana do potrzeb najbardziej wymagających Klientów."
         p="W ofercie znajdują się:"
 
         - let moskitiery_items = ['żaluzje poziome i pionowe', 'rolety wewnętrzne', 'rolety zewnętrzne', 'moskitiery', 'zasłony rzymskie', 'maty rolowane', 'markizy', 'żaluzje drewniane']
-        ul
+        ul.list
           each val in moskitiery_items
-            li=val
+            li.list__item=val
 
         p="Zapraszamy do kontaktu i zapoznania się z naszą ofertą."
   - let slider_items = ['Bramy garażowe', 'Drzwi zewnętrzne', 'Drzwi wewnętrzne', 'Systemy przeciwsłoneczne i moskitiery']
