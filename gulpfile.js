@@ -49,7 +49,7 @@ gulp.task('javascript', () => {
     .pipe(babel({
       presets: ['env']
     }))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(concat('index.js'))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());

@@ -2,63 +2,83 @@
 
 @mixin keyValueList {
   &__key, &__value {
+    margin: 0;
+    padding: 0 .5rem .5rem;
     line-height: 1.2em;
     vertical-align: top;
   }
 
   &__key {
     min-width: 120px;
+    position: relative;
   }
 
   &__key > span {
-    display: table;
     position: relative;
+    margin: 0 0 .75em;
+    line-height: 1.4em;
+  }
+
+  & span, & p {
+    margin: 0;
+  }
+
+  @include xsm {
+    &__key {
+      font-weight: 900;
+      font-size: 1.2em;
+    }
+
+    &__value {
+      margin-bottom: 1rem;
+    }
   }
 
   @include sm {
     display: flex;
     flex-wrap: wrap;
-    margin: 3em 0 0;
+    flex-direction: row;
+    margin: 1em 0 0;
 
     &__key {
-      width: 130px;
       position: relative;
+      display: flex;
+      width: 27%;
+      padding: .1rem;
       
-      &::before {
+      &::after {
         content: '';
         display: block;
-        top: .7em;
         transform: translateY(-50%);
-        left: 0;
-        right: 0;
         height: 3px;
         background: #dbdbdb;
-        position: absolute;
+        position: relative;
         z-index: 0;
+        top: .75em;
+        width: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        margin-left: .5rem;
+        margin-right: .5rem;
       }
 
-      span {
-        position: absolute;
+      & > span {
+        display: table;
+        position: relative;
         top: 0;
         left: 0;
-        display: table;
-        background: #ffffff;
-        padding: 0 .5em 0 0;
+        bottom: 0;
+        flex-direction: row;
+        flex-wrap: nowrap;
       }
     }
 
     &__value {
-      width: calc(100% - 130px);
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 73%;
+      padding: 0;
     }
 
-    &__key, &__value {
-      margin: 0 0 .75em;
-      padding: 0 .5em;
-      line-height: 1.4em;
-
-      span, p {
-        margin: 0;
-      }
-    }
   }
 }

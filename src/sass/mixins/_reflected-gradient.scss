@@ -1,0 +1,11 @@
+@mixin reflected-gradient($color: #212121, $height: 2px, $base-opacity: 0.2) {
+  height: $height;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba($color, $base-opacity) 25%,
+    rgba($color, ($base-opacity + .2)) 50%,
+    rgba($color, $base-opacity) 75%,
+    transparent 100%
+  );
+}

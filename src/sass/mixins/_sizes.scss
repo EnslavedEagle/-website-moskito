@@ -1,6 +1,6 @@
 $size-sm: 45rem;
-$size-md: 55rem;
-$size-lg: 65rem;
+$size-md: 60rem;
+$size-lg: 70rem;
 
 @mixin xsm {
   @media(max-width: $size-sm - .0001rem) {

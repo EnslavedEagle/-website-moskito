@@ -1,0 +1,21 @@
+@import '../config/variables';
+
+// mixin that helps mimic a button
+@mixin button {
+  display: table;
+  padding: .25rem .75rem;
+  background-color: rgba($color-primary, .6);
+  border: 1px solid rgba($color-white, .5);
+  border-radius: .25rem;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, .2);
+  color: $color-white;
+  font-family: $font-paragraphs;
+  margin: 0 auto;
+  text-align: center;
+
+  &:hover {
+    background-color: rgba($color-white, .8);
+    border-color: rgba($color-primary, .3);
+    color: $color-primary;
+  }
+}

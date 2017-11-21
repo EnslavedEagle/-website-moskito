@@ -2800,7 +2800,7 @@ a.anchor {
   top: -110px; }
 
 p {
-  line-height: 1.2em; }
+  line-height: 1.5em; }
 
 img {
   max-width: 100%; }
@@ -2958,7 +2958,7 @@ body > section {
     display: none;
     align-items: center; } }
 
-@media (min-width: 55rem) {
+@media (min-width: 60rem) {
   body {
     padding-top: 100px; }
   .nav__inner {
@@ -2977,10 +2977,16 @@ body > section {
   .nav__contact__item {
     line-height: 2.3em; } }
 
-.section, #o_nas_section, #montaz_serwis_section {
+.section, #o_nas_section, #montaz_serwis_section, #slider {
   background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
-  padding: 1.2em;
+  padding: .65rem;
   position: relative; }
+  @media (min-width: 45rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: .85rem; } }
+  @media (min-width: 60rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: 2rem; } }
 
 .section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
   content: '';
@@ -3060,10 +3066,16 @@ body > section {
     position: absolute;
     bottom: -10px; }
 
-.section, #o_nas_section, #montaz_serwis_section {
+.section, #o_nas_section, #montaz_serwis_section, #slider {
   background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
-  padding: 1.2em;
+  padding: .65rem;
   position: relative; }
+  @media (min-width: 45rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: .85rem; } }
+  @media (min-width: 60rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: 2rem; } }
 
 .section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
   content: '';
@@ -3096,49 +3108,65 @@ body > section {
     padding: .85em;
     margin: 1em 0; }
     #montaz_serwis_section .services__list__key, #montaz_serwis_section .services__list__value {
+      margin: 0;
+      padding: 0 .5rem .5rem;
       line-height: 1.2em;
       vertical-align: top; }
     #montaz_serwis_section .services__list__key {
-      min-width: 120px; }
-    #montaz_serwis_section .services__list__key > span {
-      display: table;
+      min-width: 120px;
       position: relative; }
+    #montaz_serwis_section .services__list__key > span {
+      position: relative;
+      margin: 0 0 .75em;
+      line-height: 1.4em; }
+    #montaz_serwis_section .services__list span, #montaz_serwis_section .services__list p {
+      margin: 0; }
+    @media (max-width: 44.9999rem) {
+      #montaz_serwis_section .services__list__key {
+        font-weight: 900;
+        font-size: 1.2em; }
+      #montaz_serwis_section .services__list__value {
+        margin-bottom: 1rem; } }
     @media (min-width: 45rem) {
       #montaz_serwis_section .services__list {
         display: flex;
         flex-wrap: wrap;
-        margin: 3em 0 0; }
+        flex-direction: row;
+        margin: 1em 0 0; }
         #montaz_serwis_section .services__list__key {
-          width: 130px;
-          position: relative; }
-          #montaz_serwis_section .services__list__key::before {
+          position: relative;
+          display: flex;
+          width: 27%;
+          padding: .1rem; }
+          #montaz_serwis_section .services__list__key::after {
             content: '';
             display: block;
-            top: .7em;
             transform: translateY(-50%);
-            left: 0;
-            right: 0;
             height: 3px;
             background: #dbdbdb;
-            position: absolute;
-            z-index: 0; }
-          #montaz_serwis_section .services__list__key span {
-            position: absolute;
+            position: relative;
+            z-index: 0;
+            top: .75em;
+            width: auto;
+            flex-shrink: 1;
+            flex-grow: 1;
+            margin-left: .5rem;
+            margin-right: .5rem; }
+          #montaz_serwis_section .services__list__key > span {
+            display: table;
+            position: relative;
             top: 0;
             left: 0;
-            display: table;
-            background: #ffffff;
-            padding: 0 .5em 0 0; }
+            bottom: 0;
+            flex-direction: row;
+            flex-wrap: nowrap; }
         #montaz_serwis_section .services__list__value {
-          width: calc(100% - 130px); }
-        #montaz_serwis_section .services__list__key, #montaz_serwis_section .services__list__value {
-          margin: 0 0 .75em;
-          padding: 0 .5em;
-          line-height: 1.4em; }
-          #montaz_serwis_section .services__list__key span, #montaz_serwis_section .services__list__key p, #montaz_serwis_section .services__list__value span, #montaz_serwis_section .services__list__value p {
-            margin: 0; } }
+          flex-grow: 1;
+          flex-shrink: 1;
+          width: 73%;
+          padding: 0; } }
 
-@media (min-width: 55rem) {
+@media (min-width: 60rem) {
   #montaz_serwis_section {
     flex-direction: row;
     align-items: center; }
@@ -3150,10 +3178,16 @@ body > section {
       max-width: 600px;
       margin: 0 auto; } }
 
-.section, #o_nas_section, #montaz_serwis_section {
+.section, #o_nas_section, #montaz_serwis_section, #slider {
   background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
-  padding: 1.2em;
+  padding: .65rem;
   position: relative; }
+  @media (min-width: 45rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: .85rem; } }
+  @media (min-width: 60rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: 2rem; } }
 
 .section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
   content: '';
@@ -3216,12 +3250,277 @@ body > section {
     margin: 1em 2.5%;
     font-size: .85rem; } }
 
-@media (min-width: 55rem) {
+@media (min-width: 60rem) {
   .types__item {
     width: 31.3333333%;
     margin: 1em 1%;
     font-size: .95rem; } }
 
-@media (min-width: 65rem) {
+@media (min-width: 70rem) {
   .types__item {
     font-size: 1.2rem; } }
+
+.section, #o_nas_section, #montaz_serwis_section, #slider {
+  background: linear-gradient(to bottom, #fbfbfb 0%, #ededed 100%);
+  padding: .65rem;
+  position: relative; }
+  @media (min-width: 45rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: .85rem; } }
+  @media (min-width: 60rem) {
+    .section, #o_nas_section, #montaz_serwis_section, #slider {
+      padding: 2rem; } }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before, .section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 100%);
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.section--shadow::before, #montaz_serwis_section::before, #montaz_serwis_types .types__item::before {
+  top: -1px; }
+
+.section--shadow::after, #montaz_serwis_section::after, #montaz_serwis_types .types__item::after {
+  bottom: -1px; }
+
+#oferta_section .slide {
+  display: flex;
+  flex-direction: column; }
+
+#oferta_section .slide__heading {
+  font-size: 1.8rem;
+  font-weight: 400; }
+  #oferta_section .slide__heading::after {
+    content: '';
+    display: block;
+    width: 50%;
+    min-width: 150px;
+    margin: .5rem 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.5) 75%, transparent 100%); }
+
+#oferta_section .slide__image {
+  width: 30%;
+  flex-shrink: 1; }
+
+#oferta_section .slide__list__key, #oferta_section .slide__list__value {
+  margin: 0;
+  padding: 0 .5rem .5rem;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+#oferta_section .slide__list__key {
+  min-width: 120px;
+  position: relative; }
+
+#oferta_section .slide__list__key > span {
+  position: relative;
+  margin: 0 0 .75em;
+  line-height: 1.4em; }
+
+#oferta_section .slide__list span, #oferta_section .slide__list p {
+  margin: 0; }
+
+@media (max-width: 44.9999rem) {
+  #oferta_section .slide__list__key {
+    font-weight: 900;
+    font-size: 1.2em; }
+  #oferta_section .slide__list__value {
+    margin-bottom: 1rem; } }
+
+@media (min-width: 45rem) {
+  #oferta_section .slide__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1em 0 0; }
+    #oferta_section .slide__list__key {
+      position: relative;
+      display: flex;
+      width: 27%;
+      padding: .1rem; }
+      #oferta_section .slide__list__key::after {
+        content: '';
+        display: block;
+        transform: translateY(-50%);
+        height: 3px;
+        background: #dbdbdb;
+        position: relative;
+        z-index: 0;
+        top: .75em;
+        width: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        margin-left: .5rem;
+        margin-right: .5rem; }
+      #oferta_section .slide__list__key > span {
+        display: table;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        flex-direction: row;
+        flex-wrap: nowrap; }
+    #oferta_section .slide__list__value {
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 73%;
+      padding: 0; } }
+
+#oferta_section .slide__list__key {
+  text-transform: uppercase;
+  font-weight: bold; }
+
+#oferta_section .bramy-garazowe {
+  background: url("assets/img/oferta-bramy_garazowe.jpg") center center no-repeat;
+  background-size: cover;
+  color: #ffffff; }
+  #oferta_section .bramy-garazowe .slide__inner {
+    background: linear-gradient(to right, rgba(119, 119, 119, 0.8) 0%, rgba(192, 192, 192, 0.3) 100%);
+    border-radius: .5rem;
+    padding: .1rem .6rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); }
+  #oferta_section .bramy-garazowe .slide__heading::after {
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 100%); }
+
+@media (max-width: 44.9999rem) {
+  #oferta_section .slide__image {
+    order: 2; }
+  #oferta_section .slide__inner {
+    text-align: center; }
+  #oferta_section .slide__list {
+    font-size: 1.3em;
+    margin: 2rem 0; }
+  #oferta_section .slide__list__key {
+    text-align: center;
+    font-weight: 900;
+    margin: .75rem 0 0; }
+  #oferta_section .slide__list__value {
+    margin: 0; }
+  #oferta_section .slide__list__value a {
+    display: table;
+    padding: .25rem .75rem;
+    background-color: rgba(0, 60, 133, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .25rem;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: "Sen", sans-serif;
+    margin: 0 auto;
+    text-align: center; }
+    #oferta_section .slide__list__value a:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(0, 60, 133, 0.3);
+      color: #003c85; }
+  #oferta_section .list {
+    font-size: .9em;
+    list-style-type: none;
+    padding: 0; }
+    #oferta_section .list__item {
+      line-height: 1.5em; }
+      #oferta_section .list__item::before {
+        content: '•';
+        display: inline-block;
+        margin: 0 .3em; }
+      #oferta_section .list__item:not(:last-child)::after {
+        height: 2px;
+        background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 100%);
+        content: '';
+        display: block;
+        margin: .5em auto;
+        width: 50%; } }
+
+@media (min-width: 45rem) {
+  #oferta_section .slide__heading {
+    font-size: 2.5rem;
+    font-weight: 400; }
+  #oferta_section .bramy-garazowe .slide__content {
+    padding: 4em 1em; }
+  #oferta_section .bramy-garazowe .slide__inner {
+    width: 65%;
+    min-width: 300px; }
+  #oferta_section .slide__list__value a {
+    color: #ed9d29;
+    font-family: "Sen", sans-serif;
+    font-weight: normal; } }
+
+@media (min-width: 60rem) {
+  #oferta_section .slide {
+    flex-direction: row; }
+  #oferta_section .slide__image {
+    min-width: 300px;
+    object-fit: cover;
+    object-position: center; }
+  #oferta_section .slide__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2.5rem; }
+  #oferta_section .slide__list {
+    margin: 1rem 2rem;
+    width: 80%;
+    min-width: 400px; }
+  #oferta_section .slide__list__key, #oferta_section .slide__list__value {
+    width: 25%; } }
+
+@keyframes FadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#slider {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+  #slider .slide {
+    min-height: 60vh;
+    font-size: .85em;
+    padding: .5rem; }
+  #slider .slide:not(.active) {
+    display: none; }
+  #slider .slide.active {
+    animation: FadeIn 0.5s ease-in-out forwards; }
+
+#slider__options {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 45rem) {
+    #slider__options {
+      flex-direction: row; } }
+  #slider__options li {
+    display: none; }
+    #slider__options li a {
+      display: inline-block;
+      padding: .5em; }
+    @media (max-width: 44.9999rem) {
+      #slider__options li {
+        width: 100%;
+        text-align: center; } }
+    @media (min-width: 45rem) {
+      #slider__options li {
+        width: 50%; } }
+  #slider__options li.next, #slider__options li.prev {
+    display: block; }
+    #slider__options li.next > a::after, #slider__options li.next > a::before, #slider__options li.prev > a::after, #slider__options li.prev > a::before {
+      display: inline-block;
+      margin: 0 .25em; }
+  @media (min-width: 45rem) {
+    #slider__options li.next {
+      text-align: right;
+      margin-left: auto; } }
+  #slider__options li.prev a::before {
+    content: '◀'; }
+  #slider__options li.next a::after {
+    content: '▶'; }

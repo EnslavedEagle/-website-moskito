@@ -1,0 +1,169 @@
+@import '../classes/section';
+@import '../mixins/reflected-gradient';
+@import '../mixins/key-value-list';
+@import '../mixins/button';
+
+#oferta_section {
+  .slide {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .slide__heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      min-width: 150px;
+      margin: .5rem 0;
+      @include reflected-gradient($color: $color-black, $base-opacity: 0.5);
+    }
+  }
+  
+  .slide__image {
+    width: 30%;
+    flex-shrink: 1;
+  }
+
+  .slide__list {
+    @include keyValueList;
+  }
+
+  .slide__list__key {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .bramy-garazowe {
+    background: url('assets/img/oferta-bramy_garazowe.jpg') center center no-repeat;
+    background-size: cover;
+    color: $color-white;
+
+    .slide__inner {
+      background: linear-gradient(to right, rgba(#777777, .8) 0%, rgba(#c0c0c0, .3) 100%);
+      border-radius: .5rem;
+      padding: .1rem .6rem;
+      text-shadow: 1px 1px 5px rgba(#000, .2);
+    }
+
+    .slide__heading::after {
+      @include reflected-gradient($color: $color-white, $base-opacity: 0.5);
+    }
+  }
+}
+
+
+@include xsm {
+  #oferta_section {
+    .slide__image {
+      order: 2;
+    }
+
+    .slide__inner {
+      text-align: center;
+    }
+
+    .slide__list {
+      font-size: 1.3em;
+      margin: 2rem 0;
+    }
+    .slide__list__key {
+      text-align: center;
+      font-weight: 900;
+      margin: .75rem 0 0;
+    }
+    .slide__list__value {
+      margin: 0;
+    }
+    .slide__list__value a {
+      @include button;
+    }
+
+    .list {
+      font-size: .9em;
+      list-style-type: none;
+      padding: 0;
+
+      &__item {
+        line-height: 1.5em;
+
+        &::before {
+          content: '•';
+          display: inline-block;
+          margin: 0 .3em;
+        }
+
+        &:not(:last-child)::after {
+          @include reflected-gradient($color-white);
+
+          content: '';
+          display: block;
+          margin: .5em auto;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  #oferta_section {
+    .slide__heading {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    .bramy-garazowe {
+      .slide__content {
+        padding: 4em 1em;
+      }
+
+      .slide__inner {
+        width: 65%;
+        min-width: 300px;
+      }
+    }
+    
+    .slide__list__value a {
+      color: $color-secondary;
+      font-family: $font-paragraphs;
+      font-weight: normal;
+    }
+  }
+}
+
+@include md {
+  #oferta_section {
+    .slide {
+      flex-direction: row;
+    }
+    
+    .slide__image {
+      min-width: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .slide__content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .slide__list {
+      margin: 1rem 2rem;
+      width: 80%;
+      min-width: 400px;
+    }
+
+    .slide__list__key, .slide__list__value {
+      width: 25%;
+    }
+  }
+}
