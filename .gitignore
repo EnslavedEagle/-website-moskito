@@ -1,5 +1,6 @@
 node_modules
 *.txt
-brief.*
-assety/
+brief.**
+assety
 dist/
+.vscode/
