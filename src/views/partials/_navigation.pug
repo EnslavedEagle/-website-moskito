@@ -1,5 +1,5 @@
-- var link_hrefs = ['#index', '#o_nas', '#montaz_serwis', '#oferta', '#galeria', '#kontakt']
-- var link_names = ['Moskito', 'O nas', 'Montaż/serwis', 'Oferta', 'Galeria', 'Kontakt']
+- var link_hrefs = ['#index', '#o_nas', '#montaz_serwis', '#oferta', '#kontakt']
+- var link_names = ['Moskito', 'O nas', 'Montaż/serwis', 'Oferta', 'Kontakt']
 
 nav.nav.nav--sticky#main-navigation
   .nav__inner
@@ -13,11 +13,11 @@ nav.nav.nav--sticky#main-navigation
     ul.nav__contact
       li.nav__contact__item.nav__contact__item--phone
         a(href="tel:" + phone)
-          span.fa.fa-phone
+          span.icon-phone
           = phone
       li.nav__contact__item.nav__contact__item--email
         a(href="mailto:" + email)
-          span.fa.fa-envelope
+          span.icon-envelope
           = email
     button.nav__hamburger#nav__hamburger
-      span.fa.fa-bars
+      span.icon-bars

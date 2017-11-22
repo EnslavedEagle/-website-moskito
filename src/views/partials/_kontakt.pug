@@ -1,0 +1,20 @@
+a.anchor#kontakt(href="javascript:void(0)")
+section#kontakt_section
+  .map
+    iframe.map__frame(frameborder="0", src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCA1uDuyDOVj-PZ1PxRZ3HgSek0rpYOeBQ&q=Oporowo+18,+64-560+Ostroróg")
+  .contact
+    h3.contact__heading="Kontakt"
+    .contact__container
+      h4.contact__name="Moskito"
+      dl.contact__list
+        dt="Imię i nazwisko"
+        dd="Sebastian Szymczak"
+        dt="Adres"
+        dd="Oporowo 18/3"
+        dd="64-560 Ostroróg"
+        dt="Adres e-mail"
+        dd
+          a(href="mailto:"+email)=email
+        dt="Telefon"
+        dd
+          a(href="tel:"+phone)="+48 508 158 316"

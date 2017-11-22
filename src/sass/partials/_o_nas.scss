@@ -13,12 +13,13 @@
     align-items: flex-end;
     width: 100%;
     min-height: 60vh;
+    padding: 1rem;
 
     &__content {
       background: rgba(255, 255, 255, .9);
       width: 80%;
       max-width: 500px;
-      margin: 8%;
+      margin: 6%;
       padding: .75em;
       border-radius: 1rem;
       box-shadow: 0 0 5rem rgba(0, 0, 0, .2);

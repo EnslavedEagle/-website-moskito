@@ -1,0 +1,32 @@
+@import '../mixins/sizes';
+
+body > footer {
+  width: 100%;
+  text-align: center;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: .8rem;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-around;
+  line-height: 1.3em;
+}
+
+@include xsm {
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__inner > :nth-child(1) {
+    order: 2;
+  }
+}
+
+@include sm {
+  .footer__inner {
+    flex-direction: row;
+  }
+}

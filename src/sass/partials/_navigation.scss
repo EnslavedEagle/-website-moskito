@@ -41,7 +41,7 @@ $transition: all .25s ease-out;
       }
     }
 
-    .fa {
+    .icon-phone, .icon-envelope {
       display: inline-block;
       text-align: center;
       font-size: 1.6rem;
@@ -54,7 +54,6 @@ $transition: all .25s ease-out;
   &__links {
     &__item {
       display: block;
-      text-align: center;
 
       a {
         display: block;
@@ -101,6 +100,7 @@ $transition: all .25s ease-out;
     display: block;
     width: 32px;
     height: 32px;
+    padding: 0;
 
     position: absolute;
     top: 30%;
@@ -145,6 +145,7 @@ $transition: all .25s ease-out;
     padding-bottom: 0;
     display: none;
     transition: $transition;
+    text-align: center;
   }
   .nav--open .nav__links,
   .nav--open .nav__contact {

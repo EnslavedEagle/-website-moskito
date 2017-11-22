@@ -1,0 +1,95 @@
+@import '../classes/section';
+@import '../mixins/sizes';
+@import '../classes/heading';
+
+#kontakt_section {
+  @extend .section;
+
+  .map {
+    &__frame {
+      width: 100%;
+      height: 240px;
+    }
+  }
+
+  .contact {
+    padding: 1.2rem 0;
+
+    &__heading {
+      @extend .heading;
+      font-size: 2rem;
+    }
+
+    &__container {
+      background: #ffffff;
+      border-radius: 1.5em;
+      padding: 1em;
+      margin: 1.5em 0 1em;
+    }
+
+    &__name {
+      color: $color-secondary;
+      font-weight: 700;
+      font-family: $font-paragraphs;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      line-height: 1.75em;
+      font-size: .85rem;
+
+      dt, dl, dd {
+        padding: 0;
+        margin: 0;
+      }
+      dt {
+        display: none;
+      }
+    }
+  }
+}
+
+@include sm {
+  #kontakt_section {
+    .contact__container {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      dd {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@include md {
+  #kontakt_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .map {
+      width: 40%;
+
+      &__frame {
+        height: 300px;
+      }
+    }
+
+    .contact {
+      padding-left: 2.5em;
+      width: 60%;
+
+      &__list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 6em;
+      }
+    }
+  }
+}

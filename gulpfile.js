@@ -9,8 +9,9 @@ const concat = require('gulp-concat');
 const clean = require('gulp-clean');
 const connect = require('gulp-connect');
 const cleanCSS = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
 
-const imageExtensions = '{png,gif,jpg,svg}';
+const imageExtensions = '{png,gif,jpg,jpeg}';
 const fontExtensions = '{eot,svg,ttf,otf,woff,woff2}';
 
 gulp.task('pug', () => {
@@ -28,7 +29,7 @@ gulp.task('sass', () => {
       outputStyle: 'pretty'
     }))
     .pipe(rename('style.css'))
-    // .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
 });
@@ -38,8 +39,11 @@ gulp.task('images', () => {
     .pipe(clean({ force: true }))
     .on('end', () => {
       gulp.src(`src/img/**/*.${imageExtensions}`)
-        .pipe(copy('dist/assets/img', { prefix: 2 }))
-        .pipe(gulp.dest('./dist'))
+        .pipe(imagemin([
+          imagemin.jpegtran({ progressive: true }),
+          imagemin.optipng({ optimizationLevel: 5 })
+        ]))
+        .pipe(gulp.dest('./dist/assets/img'))
         .pipe(connect.reload());
   });
 });
@@ -49,7 +53,7 @@ gulp.task('javascript', () => {
     .pipe(babel({
       presets: ['env']
     }))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(concat('index.js'))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload());
@@ -77,4 +81,5 @@ gulp.task('watch', () => {
   gulp.watch([`src/img/**/*.${imageExtensions}`], ['images']);
 });
 
-gulp.task('default', ['pug', 'sass', 'fonts', 'javascript', 'images', 'webserver', 'watch']);
+gulp.task('build', ['pug', 'sass', 'fonts', 'javascript', 'images']);
+gulp.task('default', ['build', 'webserver', 'watch']);

@@ -2,8 +2,7 @@
 @import 'node_modules/normalize-scss/sass/normalize';
 @include normalize();
 
-$fa-font-path: './assets/fonts';
-@import 'third-party/font-awesome/font-awesome';
+@import 'third-party/icomoon';
 
 @import 'config/variables';
 @import 'config/fonts';
