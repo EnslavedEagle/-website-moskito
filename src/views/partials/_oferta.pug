@@ -1,9 +1,9 @@
-a.anchor#oferta(href="javascript:void(0)")
+a.anchor#oferta(href="javascript:void(0)" title="Oferta")
 section#oferta_section
   .slider#slider
     .slide.slide--full.bramy-garazowe
       .slide__content
-        h3.slide__heading="Bramy garażowe"
+        h2.slide__heading="Bramy garażowe"
         .slide__inner
           p="Brama jest jednym z najważniejszych detali wykończenia budynku. Powinna być funkcjonalna, solidna, bezpieczna i dopasowana wyglądem do elewacji."
           p="Wszystkie te warunki spełniają oferowane przez nas bramy:"
@@ -23,10 +23,11 @@ section#oferta_section
           ul.list
             each val in bramy_items
               li.list__item=val
+          a.slide__galleryLink(href="http://serwismoskito.pl/galeria/#15165812590292", target="_blank")="Realizacje"
     .slide.drzwi-zewnetrzne
       img.slide__image(src="assets/img/oferta-drzwi_zewnetrzne.jpg", alt="")
       .slide__content
-        h3.slide__heading="Drzwi zewnętrzne"
+        h2.slide__heading="Drzwi zewnętrzne"
         p="Drzwi zewnętrzne, są następnym wyeksponowanym detalem naszego budynku. Zakup drzwi wejściowych nie jest łatwy, wybór wzorów, kolorów, przeszkleń jest przeogromny. Poza tym, element ten służyć ma Państwu przez długie lata, dlatego wybrane przez Was drzwi powinny spełniać trzy podstawowe wymagania. Muszą być:"
         ul
           li="trwałe,"
@@ -39,12 +40,13 @@ section#oferta_section
           a(href="http://wiked.pl/katalogi/katalogdrzwi1.pdf", title="Drzwi Wikęd")="pobierz katalog"
         p
           | Drzwi Zewnętrzne w 6 podstawowych liniach. Każdy z rodzajów dostępny jest w wielu wzorach, a każdy ze wzorów w kilku kolorach podstawowych oraz na specjalne zamówienie, w kolorach Palety RAL. Dzięki tak bogatej ofercie możecie Państwo tak dobrać drzwi, aby Wasz budynek nabrał szyku i elegancji nie rezygnując z trwałości i funkcjonalności i to wszystko za przystępną cenę.
+        a.slide__galleryLink(href="http://serwismoskito.pl/galeria/#15165821013047", target="_blank")="Realizacje"
     .slide.drzwi-wewnetrzne
       img.slide__image(src="assets/img/oferta-drzwi_wewnetrzne.jpg", alt="")
       .slide__content
-        h3.slide__heading="Drzwi wewnętrzne"
+        h2.slide__heading="Drzwi wewnętrzne"
         p="Uważamy, że drzwi wewnętrzne są równie istotne, jak poszczególne meble je otaczające. Modne drzwi wewnętrzne sprawiają, że dana przestrzeń nabiera zupełnie nowego, wyjątkowego wyrazu. Owe modne drzwi, o czym nie można zapominać, spełniają także funkcje praktyczne."
-        h5="Eleganckie drzwi do każdego wnętrza"
+        h3="Eleganckie drzwi do każdego wnętrza"
         p="W naszej obszernej ofercie znajdziesz drzwi największych i najbardziej renomowanych polskich producentów:"
         
         - let itemNames = ['Porta', 'Dre', 'Erkado', 'Pol-skone']
@@ -59,10 +61,11 @@ section#oferta_section
                 a(href=itemLinks[i])="pobierz katalog"
         p="Choć czasem nie zdajesz sobie z tego sprawy, niemal każdego dnia drzwi otwierane i zamykane są dziesiątki razy. Dlatego też, dla ich prawidłowego i komfortowego użytkowania będzie miał wpływ fachowy dobry montaż."
         p="Nasze produkty wykonane są z wysokiej jakości materiałów, dzięki czemu zyskujesz gwarancję długotrwałego, bezproblemowego użytkowania i komfortu, nawet jeśli drzwi są mocno eksploatowane!"
+        a.slide__galleryLink(href="http://serwismoskito.pl/galeria/#15165821260530", target="_blank")="Realizacje"
     .slide.systemy-przeciwsloneczne
       img.slide__image(src="assets/img/oferta-systemy_przeciwsloneczne.jpg", alt="")
       .slide__content
-        h3.slide__heading="Systemy przeciwsłoneczne i moskitiery"
+        h2.slide__heading="Systemy przeciwsłoneczne i moskitiery"
         p="Naszą specjalizacją są wszelakie systemy przeciwsłoneczne. Oferujemy szeroką gamę produktów, dopasowana do potrzeb najbardziej wymagających Klientów."
         p="W ofercie znajdują się:"
 
@@ -72,6 +75,7 @@ section#oferta_section
             li.list__item=val
 
         p="Zapraszamy do kontaktu i zapoznania się z naszą ofertą."
+        a.slide__galleryLink(href="http://serwismoskito.pl/galeria/#15165821390660", target="_blank")="Realizacje"
   - let slider_items = ['Bramy garażowe', 'Drzwi zewnętrzne', 'Drzwi wewnętrzne', 'Systemy przeciwsłoneczne i moskitiery']
   ul#slider__options
     each val, index in slider_items

@@ -11,7 +11,7 @@ const connect = require('gulp-connect');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 
-const imageExtensions = '{png,gif,jpg,jpeg}';
+const imageExtensions = '{png,gif,jpg,jpeg,ico}';
 const fontExtensions = '{eot,svg,ttf,otf,woff,woff2}';
 
 gulp.task('pug', () => {

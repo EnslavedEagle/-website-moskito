@@ -17,6 +17,7 @@
     &__item {
       @extend .section--shadow;
 
+      cursor: pointer;
       display: block;
       background: $color-light-grey;
       font-family: $font-headings;
@@ -24,6 +25,13 @@
       text-align: center;
       position: relative;
       box-sizing: border-box;
+      transform: scale(1.0) translateZ(0);
+      transition: transform .15s ease-out;
+      backface-visibility: hidden;
+
+      &:hover {
+        transform: scale(1.05) translateZ(0);
+      }
     }
 
     &__image {

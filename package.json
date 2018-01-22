@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
     "gulp": "^3.9.1",
     "gulp-watch": "^4.3.11",
     "normalize-scss": "^7.0.0"

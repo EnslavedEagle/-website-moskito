@@ -1,23 +1,23 @@
-- var link_hrefs = ['#index', '#o_nas', '#montaz_serwis', '#oferta', '#kontakt']
-- var link_names = ['Moskito', 'O nas', 'Montaż/serwis', 'Oferta', 'Kontakt']
+- var link_hrefs = ['#index', '#o_nas', '#montaz_serwis', '#oferta', '#galeria', '#kontakt']
+- var link_names = ['Moskito', 'O nas', 'Montaż/serwis', 'Oferta', 'Galeria', 'Kontakt']
 
 nav.nav.nav--sticky#main-navigation
   .nav__inner
     h1.nav__logo
-      a(title=link_names[0], href=link_hrefs[0])
-        img.nav__logo__img(alt=link_names[0], src="./assets/img/moskito-logo.png")
+      a(title="Logo Moskito", href=link_hrefs[0])
+        img.nav__logo__img(alt="", src="./assets/img/moskito-logo.png")
     ul.nav__links
       - for (var i = 1, len = link_names.length; i < len; i++)
         li.nav__links__item
           a(title=link_names[i], href=link_hrefs[i])=link_names[i]
     ul.nav__contact
       li.nav__contact__item.nav__contact__item--phone
-        a(href="tel:" + phone)
+        a(href="tel:" + phone.replace(' ',''))
           span.icon-phone
-          = phone
+          = "+48 " + phone
       li.nav__contact__item.nav__contact__item--email
-        a(href="mailto:" + email)
+        a(href="mailto:" + email1)
           span.icon-envelope
-          = email
+          = email1
     button.nav__hamburger#nav__hamburger
       span.icon-bars

@@ -4,9 +4,9 @@
 - var list_names = ['Drzwi', 'Bramy garażowe', 'Rolety i żaluzje', 'Markizy']
 - var list_descs = ['Montaż nowych drzwi, wymiana klamek, wkładek, zawiasów, uszczelek. Regulacja i podcinanie', 'Montaż nowych bram, montaż bram przemysłowych, montaż automatyki, regulacje, przeglądy, programowanie automatyki', 'Kompleksowe naprawy rolet materiałowych i zewnętrznych oraz żaluzji', 'Naprawy markiz, wymiana płócien']
 
-a.anchor#montaz_serwis(href="javascript:void(0)")
+a.anchor#montaz_serwis(href="javascript:void(0)" title="Montaż, serwis")
 section.services#montaz_serwis_section
-  img.services__image(alt="Montaż i serwis", src="assets/img/montaz_serwis-image.jpg")
+  img.services__image(alt="Montaż i serwis drzwi, bram garażowych, rolet, żaluzji, markiz", src="assets/img/montaz_serwis-image.jpg")
   .services__text
     h2.services__heading
       | Montaż i serwis
@@ -15,7 +15,7 @@ section.services#montaz_serwis_section
       |  w&nbsp;celu wypełnienia formularza kontaktowego. 
       br
     p.services__lead Możecie również Państwo zapytać telefonicznie: 
-      a(href="tel: " + phone)=phone
+      a(href="tel:" + phone)=phone
       | .
     dl.services__list
       - for (var i = 0, len = list_names.length; i < len; i++)

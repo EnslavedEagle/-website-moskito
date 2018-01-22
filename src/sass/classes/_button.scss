@@ -1,0 +1,19 @@
+%button {
+  font-family: $font-headings;
+  border-radius: 1px;
+  background: $color-white;
+  border: 0;
+  border-bottom: 2px solid darken($color-light-grey, 10%);
+  color: $color-primary;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  padding: .5em 1em;
+  margin: 1em 1.5em;
+  align-self: flex-start;
+  
+  &.disabled {
+    background: darken($color-light-grey, 10%);
+    color: lighten($color-black, 30%);
+  }
+}

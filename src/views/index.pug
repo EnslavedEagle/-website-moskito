@@ -1,6 +1,7 @@
-- var title = 'Moskito'
-- var phone = '508-158-316'
-- var email = 'moskitobiuro@o2.pl'
+- var title = 'Bramy, drzwi, markizy, rolety, żaluzje | Moskito'
+- var phone = '508 158 316'
+- var email1 = 'biuro.serwis@serwismoskito.pl'
+- var email2 = 'wyceny@serwismoskito.pl'
 - var address1 = 'Oporowo 18/3'
 - var address2 = '64-560 Ostroróg'
 
@@ -10,13 +11,21 @@ html(lang="pl")
     title= title
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Montaż drzwi, wymiana klamek, regulacja i podcinanie. Montaż bram, bram przemysłowych, automatyki, regulacje, przeglądy. Kompleksowe naprawy rolet i żaluzji. Markizy, płótna")
+    meta(name="keywords" content="Montaż drzwi, bramy, bramy garażowe, bramy przemysłowe, automatyka bram, regulacja bram, przegląd bramy, rolety, żaluzje, montaż rolet i żaluzji")
+    link(rel="shortcut icon" href="./assets/img/favicon.ico?v=1" type="image/x-icon")
     link(rel="stylesheet" href="style.css")
   body
     include partials/_navigation
     include partials/_o_nas
     include partials/_montaz_serwis
     include partials/_oferta
+    include partials/_galeria
     include partials/_kontakt
     include partials/_footer
 
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
     script(src="index.js")
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-110925846-1")
+    script
+      include partials/_googleAnalytics.js

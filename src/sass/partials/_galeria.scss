@@ -1,0 +1,43 @@
+@import '../classes/section';
+@import '../mixins/sizes';
+@import '../classes/heading';
+@import '../classes/button';
+
+#galeria_section {
+  @extend .section;
+  text-align: center;
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__item {
+      display: block;
+      flex: 0 0 50%;
+      width: 50%;
+
+      @include sm {
+        flex: 0 0 25%;
+        width: 25%
+      }
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+    }
+
+    &__image {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .gallery-btn {
+    @extend %button;
+  }
+}
